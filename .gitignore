@@ -1,0 +1,10 @@
+/*.zip
+/allure-report/
+/allure-results/
+/screenshot/
+/wic/
+/node_modules/
+/.tmp/
+/test/*
+/.idea/
+/package-lock.json

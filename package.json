@@ -1,0 +1,57 @@
+{
+  "name": "typescript-mocha-webdriverio-framework",
+  "version": "1.0.0",
+  "description": "A pure mocha framework with webdriverio",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "mocha --no-timeouts -exit --trace-deprecation",
+    "test-testlio": "mocha --no-timeouts --exit --trace-deprecation -- --executiontype=web --provider=testlio --browser=chrome",
+    "test:chrome": "npm test -- --executiontype=web --provider=local --browser=chrome –allureResults='./allure-results'",
+    "report": "allure generate ./allure-results -c && allure open",
+    "package": "npm install && npx npm-bundle && zip -r $npm_package_name-package-$(date +\"%Y-%m-%d-%H-%M-%S\").zip *.tgz && rm *.tgz"
+  },
+  "keywords": [
+    "mocha",
+    "typescript",
+    "tdd"
+  ],
+  "author": "Pawan Singh",
+  "dependencies": {
+    "@testdeck/mocha": "^0.2.0",
+    "@types/chai": "^4.0.4",
+    "@types/mocha": "^2.2.48",
+    "@types/sinon": "^2.3.7",
+    "@types/sinon-chai": "^2.7.29",
+    "allure-decorators": "^2.0.0-beta.15",
+    "allure-js-commons": "^2.0.0-beta.15",
+    "allure-mocha": "^2.0.0-beta.15",
+    "chai": "^4.1.2",
+    "install": "^0.13.0",
+    "mocha": "^9.2.2",
+    "mocha-multi-reporters": "^1.5.1",
+    "pixelmatch": "^5.2.1",
+    "rimraf": "^3.0.2",
+    "sinon": "^4.1.1",
+    "sinon-chai": "^2.14.0",
+    "source-map-support": "^0.5.21",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2",
+    "valid-url": "^1.0.9",
+    "webdriverio": "^7.19.7",
+    "winston": "^3.6.0",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.18.7/xlsx-0.18.7.tgz",
+    "yargs": "^17.3.1"
+  },
+  "devDependencies": {
+    "@wdio/allure-reporter": "^7.23.0",
+    "@wdio/firefox-profile-service": "^7.23.0",
+    "@wdio/selenium-standalone-service": "^7.23.0",
+    "chromedriver": "^94.0.0",
+    "eslint": "^8.13.0",
+    "selenium-standalone": "^8.2.0",
+    "tslint": "^6.1.3",
+    "wdio-chromedriver-service": "^7.3.2",
+    "wdio-image-comparison-service": "^3.1.1",
+    "wdio-native-app-compare-service": "^1.2.0"
+  }
+}

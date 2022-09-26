@@ -1,0 +1,27 @@
+{
+  "compilerOptions" : {
+    "experimentalDecorators": true,
+    "target": "ES6",
+    "sourceMap" : true,
+    "declaration": true,
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+  },
+  "typeRoots": [
+    "node_modules/@types"
+  ],
+  "types": [
+    "mocha",
+    "wdio-image-comparison-service",
+    "node",
+    "chai",
+    "sinon",
+    "sinon-chai",
+    "webdriverio/async"
+  ],
+  
+  "exclude" : [
+    "node_modules"
+  ]
+}
