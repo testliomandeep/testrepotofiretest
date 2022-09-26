@@ -24,7 +24,7 @@ jobs:
        - name: run test
          run: |
            curl -X POST \
-           -H "Authorization: Bearer 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" \
+           -H "Authorization: Bearer ${{ secrets.SECRET_TOKEN }}" \
            -H "Accept: application/vnd.github.v3+json" \
            https://api.github.com/repos/testliomandeep/mytestrepo/actions/workflows/node.js.yml/dispatches \
            -d '{"ref": "master"}'
