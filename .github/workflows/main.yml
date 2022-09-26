@@ -22,7 +22,9 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Check out my other private repo
-        uses: actions/checkout@master
+        uses: actions/checkout@main
         with:
           repository: testliomandeep/mytestrepo
           token: ${{ secrets.SECRET_TOKEN }}
+          run: |
+            git config --global init.defaultBranch main
