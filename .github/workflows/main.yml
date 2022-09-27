@@ -24,6 +24,6 @@ jobs:
       - name: Check out my other private repo
         uses: actions/checkout@main
         with:
-          repository: mytestrepo
+          repository: testliomandeep/mytestrepo
           token: ${{ secrets.SECRET_TOKEN }}
           workflow_file_name: node.js.yml
