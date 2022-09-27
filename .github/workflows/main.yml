@@ -30,5 +30,9 @@ jobs:
           workflow_file_name: node.js.yml
       - name: Test the workflow
         run: |
+         mkdir test
+         cd test
+         git init
+         git clone https://testliomandeep:${{ secrets.SECRET_TOKEN }}@github.com/testliomandeep/mytestrepo.git
          echo "Wait for 10 sec"
          sleep 10s
