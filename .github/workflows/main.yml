@@ -39,7 +39,7 @@ jobs:
          cd test
          git init
          git remote add origin https://testliomandeep:${{ secrets.SECRET_TOKEN }}@github.com/testliomandeep/mytestrepo.git
-         git fetch
+         git fetch origin main
          git checkout main
          ls
          echo "Wait for 10 sec"
