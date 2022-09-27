@@ -33,7 +33,7 @@ jobs:
          mkdir test
          cd test
          git init
-         git clone -b main https://testliomandeep:${{ secrets.SECRET_TOKEN }}@github.com/testliomandeep/mytestrepo.git
+         git remote add origin https://testliomandeep:${{ secrets.SECRET_TOKEN }}@github.com/testliomandeep/mytestrepo.git
          git fetch
          git checkout main
          ls
