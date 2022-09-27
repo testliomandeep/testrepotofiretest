@@ -24,6 +24,11 @@ jobs:
       - name: Check out my other private repo
         uses: actions/checkout@main
         with:
-          repository: testliomandeep/mytestrepo
+          owner: testliomandeep
+          repo:  mytestrepo
           token: ${{ secrets.SECRET_TOKEN }}
           workflow_file_name: node.js.yml
+      - name: Test the workflow
+        run: |
+         echo "Wait for 10 sec"
+         sleep 10s
