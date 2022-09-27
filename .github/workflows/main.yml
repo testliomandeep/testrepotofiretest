@@ -39,3 +39,15 @@ jobs:
          ls
          echo "Wait for 10 sec"
          sleep 10s
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 16
+      - name: install node
+        run: npm install
+
+      - name: run build
+        run: npm run build --if-present
+      - name: start Test
+        run: npm test -- --executiontype=web --provider=local --browser=chrome --allureResults='./allure-results'
