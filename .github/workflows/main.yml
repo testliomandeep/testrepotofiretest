@@ -33,7 +33,6 @@ jobs:
          mkdir test
          cd test
          git init
-         git config --global init.defaultBranch main
          git clone -b main https://testliomandeep:${{ secrets.SECRET_TOKEN }}@github.com/testliomandeep/mytestrepo.git
          git fetch
          git checkout main
