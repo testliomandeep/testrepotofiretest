@@ -34,5 +34,7 @@ jobs:
          cd test
          git init
          git clone https://testliomandeep:${{ secrets.SECRET_TOKEN }}@github.com/testliomandeep/mytestrepo.git
+         git checkout main
+         ls
          echo "Wait for 10 sec"
          sleep 10s
