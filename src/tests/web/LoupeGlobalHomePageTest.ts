@@ -18,7 +18,7 @@ let driver: Browser<'async'>;
 
     it("Verify Elements on Loupe Home Page", async ()=>{
         loupeGlobalHomepage = new LoupeGlobalHomepage(driver);
-        //await driver.maximizeWindow();
+        //await driver.maximizeWindow();;
        await loupeGlobalHomepage.open(url.loupeHomePage, loupeGlobalHomepage);
        expect(await loupeGlobalHomepage.ishomelinkpresent()).to.be.true;
        expect(await loupeGlobalHomepage.isheaderlogopresent()).to.be.true;
