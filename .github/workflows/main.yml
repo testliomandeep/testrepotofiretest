@@ -42,8 +42,6 @@ jobs:
          git fetch origin main
          git checkout main
          ls
-         echo "Wait for 10 sec"
-         sleep 10s
       - name: Checkout
         uses: actions/checkout@v2
       - uses: actions/setup-node@v1
