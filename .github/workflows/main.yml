@@ -4,6 +4,10 @@ name: CI
 
 # Controls when the workflow will run
 on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -24,10 +28,7 @@ jobs:
       - name: Check out my other private repo
         uses: actions/checkout@main
         with:
-          owner: testliomandeep
-          repo:  mytestrepo
           token: ${{ secrets.SECRET_TOKEN }}
-          workflow_file_name: node.js.yml
       - name: Test the workflow
         run: |
          mkdir test
