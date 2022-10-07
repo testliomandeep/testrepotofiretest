@@ -25,10 +25,6 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Check out my other private repo
-        uses: actions/checkout@main
-        with:
-          token: ${{ secrets.SECRET_TOKEN }}
       - name: Test the workflow
         run: |
          mkdir test
@@ -38,6 +34,11 @@ jobs:
          git fetch origin main
          git checkout main
          ls
+      - name: Checkout tools repo
+        uses: actions/checkout@v3
+        with:
+            repository: testliomandeep/mytestrepo
+            path: mytestrepo
       - uses: actions/setup-node@v1
         with:
           node-version: 16
