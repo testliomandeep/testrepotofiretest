@@ -38,10 +38,6 @@ jobs:
          git fetch origin main
          git checkout main
          ls
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          repository: testliomandeep/mytestrepo
       - uses: actions/setup-node@v1
         with:
           node-version: 16
