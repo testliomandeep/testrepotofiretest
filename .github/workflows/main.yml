@@ -43,7 +43,7 @@ jobs:
          cd test
          ls
          pwd
-         npm ci
+         npm install
          
       - name: run build
         run: npm run build --if-present
