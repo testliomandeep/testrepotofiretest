@@ -40,6 +40,8 @@ jobs:
       - name: install node
         run: |
          ls
+         cd test
+         ls
          pwd
          npm ci
          
