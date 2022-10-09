@@ -44,8 +44,6 @@ jobs:
          ls
          pwd
          npm install
-         
-      - name: run build
-        run: npm run build --if-present
+         npm run build --if-present
       - name: start Test
         run: npm test -- --executiontype=web --provider=local --browser=chrome --allureResults='./allure-results'
