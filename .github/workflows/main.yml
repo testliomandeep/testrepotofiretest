@@ -38,7 +38,7 @@ jobs:
         with:
           node-version: 16
       - name: install node
-      - run: |
+        run: |
          ls
          pwd
          npm ci
